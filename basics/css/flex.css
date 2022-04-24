@@ -1,0 +1,379 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	background-color: #F5F5F5;
+	font-size: 28upx;
+	color: #333333;
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button::after {
+	border: none;
+	background-color: none;
+}
+
+/* 元素继承宽度 margin与padding计算在内 */
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+
+/* 基础用法 */
+.bor {
+	border: solid 1px red;
+}
+
+.margin {
+	margin: 5rpx;
+}
+
+.margin-left {
+	margin-left: 5rpx;
+}
+
+.margin-right {
+	margin-right: 5rpx;
+}
+
+.margin-top {
+	margin-top: 5rpx;
+}
+
+.margin-bottom {
+	margin-bottom: 5rpx;
+}
+
+.m15 {
+	margin-right: 15rpx;
+}
+
+.padding {
+	padding: 5rpx;
+}
+
+.padding-left {
+	padding-left: 5rpx;
+}
+
+.padding-right {
+	padding-right: 5rpx;
+}
+
+.padding-top {
+	padding-top: 5rpx;
+}
+
+.padding-bottom {
+	padding-bottom: 5rpx;
+}
+
+/* 弹性布局 */
+.flex {
+	display: flex;
+}
+
+.ju-center {
+	justify-content: center;
+}
+
+.ju-start {
+	justify-content: flex-start;
+}
+
+.ju-end {
+	justify-content: flex-end;
+}
+
+.ju-spa {
+	justify-content: space-between;
+}
+
+/*  */
+.align-center {
+	align-items: center;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+/* 排列方式 */
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+/* 折行 */
+.warp {
+	flex-wrap: wrap;
+}
+
+.nowarp {
+	flex-wrap: nowrap;
+}
+
+.f1 {
+	flex: 1;
+}
+
+.f2 {
+	flex: 2;
+}
+
+.f3 {
+	flex: 3;
+}
+
+.f4 {
+	flex: 4;
+}
+
+/* 颜色 */
+.bg-white {
+	background-color: white;
+}
+
+.bg-orange {
+	background-color: orange;
+}
+
+.bg-yellow {
+	background-color: yellow;
+}
+
+.bg-green {
+	background-color: green;
+}
+
+.anvtr {
+	width: 120rpx;
+	height: 120rpx;
+}
+
+.anvtrsmll {
+	width: 100rpx;
+	height: 100rpx;
+}
+
+.radius {
+	border-radius: 50%;
+}
+
+/* 阴影部分 */
+.box-sha {
+	box-shadow: 5rpx 5rpx 15rpx 0 rgba(0, 0, 0, 0.15);
+}
+
+/* 缩进 */
+.text-ind {
+	text-indent: 2em;
+}
+
+.zmax {
+	z-index: 99;
+}
+
+.zmin {
+	z-index: -99;
+}
+
+.line-h {
+	line-height: 60rpx;
+}
+
+.tr {
+	text-align: right;
+}
+
+.op {
+	opacity: 0.9;
+}
+
+/* 超出显示省略号 */
+.over {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 多行 */
+.apos {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.pos-cen {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.bj-size {
+	background-size: 100% 100%;
+}
+
+.bot-bor {
+	border-bottom: solid 1px #F5F5F5;
+}
+
+.bjwhite {
+	background-color: white;
+}
+
+.ios-bott {
+	padding-bottom: constant(safe-area-inset-bottom) !important;
+	/* 兼容 iOS < 11.2 */
+	padding-bottom: env(safe-area-inset-bottom) !important;
+	/* 兼容 iOS >= 11.2 */
+}

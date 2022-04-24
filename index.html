@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>
+			<%= htmlWebpackPlugin.options.title %>
+		</title>
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Title Here" />
+		<meta property="og:url" content="http://www.example.com/" />
+		<meta property="og:image" content="http://example.com/image.jpg" />
+		<meta property="og:description" content="Description Here" />
+		<script>
+			var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS
+				.supports('top: constant(a)'))
+			document.write(
+				'<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+				(coverSupport ? ', viewport-fit=cover' : '') + '" />')
+		</script>
+		<link rel="stylesheet" href="<%= BASE_URL %>static/index.<%= VUE_APP_INDEX_CSS_HASH %>.css" />
+		<style>
+			#lodings {
+				position: fixed;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				background-color: orange;
+				z-index: 9;
+			}
+
+			#preloader {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			#preloader span {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				border-radius: 999px;
+				background: #fff;
+				animation: bounce 1s infinite linear;
+			}
+
+			#preloader span:nth-child(1) {
+				animation-delay: 0s;
+			}
+
+			#preloader span:nth-child(2) {
+				animation-delay: 0.25s;
+			}
+
+			#preloader span:nth-child(3) {
+				animation-delay: 0.5s;
+			}
+
+			#preloader span:nth-child(4) {
+				animation-delay: 0.75s;
+			}
+
+			#preloader span:nth-child(5) {
+				animation-delay: 1.0s;
+			}
+
+			@keyframes bounce {
+				0% {
+					transform: translateY(0px);
+					opacity: 0.5;
+				}
+
+				50% {
+					transform: translateY(-30px);
+					opacity: 1.0;
+				}
+
+				100% {
+					transform: translateY(0px);
+					opacity: 0.5;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<noscript>
+			<strong>Please enable JavaScript to continue.</strong>
+		</noscript>
+		<div id="app">
+			<div id="lodings">
+				<div id="preloader">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<!-- built files will be auto injected -->
+	</body>
+</html>

@@ -1,0 +1,69 @@
+// 移动端1px 问题 引入计算
+$border-poses : bottom;
+$color : #ccc;
+@mixin border-px($poses:$border-poses , $color:$color) {
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+
+		@each $pos in $poses {
+			border-#{$pos}: 1px solid $color;
+			#{$pos}: 0;
+		}
+	}
+}
+
+@mixin border($color:$color) {
+	border-style: solid;
+	border-color: $color;
+}
+
+@mixin border-loac($loac: bottom,$px:1,$color:$color,$style:solid) {
+	border-#{$loac}: $px $color $style;
+}
+
+@media (-webkit-min-device-pixel-ratio:1),
+(min-device-pixel-ratio: 1) {
+	.border-px &::after {
+		width: 100%;
+		height: 100%;
+		transform: scale(1);
+	}
+	.border {
+		border-width:1px;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-device-pixel-ratio: 2) {
+	.border-px &::after {
+		width: 200%;
+		height: 200%;
+		transform: scale(0.5);
+	}
+	.border {
+		border-width:0.5px;
+	}
+	.border-loac{
+		border-width:0.5px;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio:3),
+(min-device-pixel-ratio: 3) {
+	.border-px &::after {
+		width: 300%;
+		height: 300%;
+		transform: scale(0.333);
+	}
+	.border {
+		border-width:0.333px;
+	}
+	.border-loac{
+		border-width:0.333px;
+	}
+}
